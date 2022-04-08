@@ -10,7 +10,7 @@ import java.util.*
 
 object UUIDSerializer : KSerializer<UUID> {
     override fun deserialize(decoder: Decoder) = decoder.decodeString().let {
-        UUID.fromString(it) ?: kotlin.run {
+        UUID.fromString(it) ?: run {
             Log.e("UUID_SERIALIZER", "Invalid uuid: $it")
 
             UUID(0, 0)

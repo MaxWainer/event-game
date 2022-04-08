@@ -9,5 +9,6 @@ data class GameUser(
     @Serializable(UUIDSerializer::class) val uniqueId: UUID,
     val currentLevel: Level,
     val currentQuest: Quest,
+    val email: String,
     override val displayName: String
 ) : Displayable

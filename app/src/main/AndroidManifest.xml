@@ -9,12 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EventGame">
-
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.RegisterActivity"
             android:exported="false"
-            android:label="@string/title_activity_main"
             android:theme="@style/Theme.EventGame.NoActionBar" />
+        <activity android:name=".activity.EntryActivity" />
         <activity
             android:name=".EventGameActivity"
             android:exported="true">

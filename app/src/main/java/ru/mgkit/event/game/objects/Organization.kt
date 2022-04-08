@@ -8,4 +8,12 @@ import java.util.*
 data class Organization(
     @Serializable(UUIDSerializer::class) val uniqueId: UUID,
     override val displayName: String
-) : Displayable
+) : Displayable {
+
+    companion object {
+        val DUMMY = Organization(UUID(0, 0), "DUMMY")
+    }
+
+    val dummy: Boolean = uniqueId == DUMMY.uniqueId && displayName == DUMMY.displayName
+
+}
